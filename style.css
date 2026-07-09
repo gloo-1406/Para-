@@ -1,0 +1,819 @@
+/* ==========================================
+   PARA EUDI 🩵
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#050b14;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+      FONDO
+========================== */
+
+.background{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-3;
+
+    background:
+    radial-gradient(circle at top,#163f70 0%,#091523 45%,#04070d 100%);
+
+}
+
+/* ==========================
+      ESTRELLAS
+========================== */
+
+#stars{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-2;
+
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.18;
+
+    animation:stars 80s linear infinite;
+
+}
+
+@keyframes stars{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-300px);
+
+    }
+
+}
+
+/* ==========================
+     CORAZONES
+========================== */
+
+#hearts{
+
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+
+}
+
+/* ==========================
+      HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.glass{
+
+    width:min(95%,850px);
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.hero h2{
+
+    font-size:30px;
+    font-weight:300;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#8ddcff;
+
+    font-size:75px;
+
+    margin:10px 0;
+
+    text-shadow:
+    0 0 15px #8ddcff;
+
+animation: glow 2s ease-in-out infinite alternate;
+
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    line-height:34px;
+
+    font-size:20px;
+
+    color:#e6f7ff;
+
+}
+
+/* ==========================
+      BOTONES
+========================== */
+
+button{
+
+    margin-top:35px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#8ddcff;
+
+    color:#06111f;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(141,220,255,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    background:white;
+
+    box-shadow:0 15px 35px rgba(255,255,255,.35);
+
+}
+
+/* ==========================
+      SECCIONES
+========================== */
+
+section{
+
+    padding:100px 20px;
+
+    position:relative;
+
+}
+
+.story h2,
+.letter h2,
+.quote h2,
+.proposal h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#8ddcff;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================
+      TIMELINE
+========================== */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+      TARJETAS
+========================== */
+
+.photo-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.photo-card h3{
+
+    padding:20px 20px 10px;
+
+    color:#8ddcff;
+
+    font-size:28px;
+
+}
+
+.photo-card p{
+
+    padding:0 20px 25px;
+
+    line-height:30px;
+
+    font-size:18px;
+
+    color:#eaf7ff;
+
+}
+
+/* ==========================
+      ANIMACIÓN
+========================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================
+      CARTA
+========================== */
+
+.letter{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.letter-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+#letterText{
+
+    margin-top:25px;
+
+    line-height:38px;
+
+    font-size:20px;
+
+    color:#eef9ff;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================
+      FRASE
+========================== */
+
+.quote{
+
+    text-align:center;
+
+}
+
+.quote .glass{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.quote h2{
+
+    font-size:40px;
+
+    line-height:55px;
+
+}
+
+.quote p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    color:#d7f3ff;
+
+    line-height:35px;
+
+}
+
+/* ==========================
+      PROPUESTA
+========================== */
+
+.proposal{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.proposal .glass{
+
+    text-align:center;
+
+    max-width:900px;
+
+}
+
+.cover-photo{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:0 auto 30px;
+
+    display:block;
+
+    border-radius:22px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.proposal h1{
+
+    font-size:52px;
+
+    color:#8ddcff;
+
+    margin:25px 0;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================
+      CELEBRACIÓN
+========================== */
+
+.success{
+
+    display:none;
+
+    min-height:100vh;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.success.active{
+
+    display:flex;
+
+}
+
+.success-box{
+
+    max-width:900px;
+
+}
+
+.success h1{
+
+    font-size:58px;
+
+    color:#8ddcff;
+
+    margin-bottom:25px;
+
+}
+
+.success-text{
+
+    font-size:22px;
+
+    line-height:36px;
+
+    color:#eef9ff;
+
+}
+
+/* ==========================
+      CONTADOR
+========================== */
+
+.counter{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:45px;
+
+}
+
+.time-box{
+
+    width:120px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.time-box span{
+
+    display:block;
+
+    font-size:38px;
+
+    color:#8ddcff;
+
+    font-weight:700;
+
+}
+
+.time-box small{
+
+    font-size:16px;
+
+    color:#d9f4ff;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:32px;
+
+}
+
+.story h2,
+.letter h2,
+.quote h2,
+.proposal h2{
+
+    font-size:32px;
+
+}
+
+.proposal h1{
+
+    font-size:38px;
+
+}
+
+.time-box{
+
+    width:90px;
+
+}
+
+.time-box span{
+
+    font-size:30px;
+
+}
+
+}
+
+/* ==========================================
+        CORAZONES FLOTANTES
+========================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:22px;
+
+    color:#8ddcff;
+
+    animation:floatHeart linear forwards;
+
+    opacity:.8;
+
+    pointer-events:none;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0) scale(.7);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+        CONFETI
+========================================== */
+
+#confetti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+}
+
+/* ==========================================
+        SCROLL
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07111d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8ddcff;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+        SELECCIÓN DE TEXTO
+========================================== */
+
+::selection{
+
+    background:#8ddcff;
+
+    color:#06111f;
+
+}
+
+/* ==========================================
+        ANIMACIONES
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.story,
+.letter,
+.quote,
+.proposal,
+.success{
+
+    animation:fadeUp 1s ease;
+
+}
+
+/* ==========================================
+        EFECTO GLASS
+========================================== */
+
+.glass:hover{
+
+    transform:translateY(-5px);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45),
+
+    0 0 30px rgba(141,220,255,.15);
+
+}
+
+/* ==========================================
+        BOTÓN MÚSICA
+========================================== */
+
+#musicBtn{
+
+    margin-top:35px;
+
+}
+
+/* ==========================================
+        PIE
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#9dcfe7;
+
+    opacity:.7;
+
+    font-size:15px;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+        0 0 15px #8ddcff;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 25px #8ddcff,
+        0 0 45px #8ddcff;
+
+    }
+
+}
